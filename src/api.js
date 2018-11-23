@@ -18,8 +18,12 @@ axios.interceptors.request.use(request => {
   }
 })
 
-export const loadTopRatedMovies = () => {
-  return axios.get("/movie/top_rated")
+export const loadTopRatedMovies = pageNumber => {
+  return axios.get("/movie/top_rated", {
+    params: {
+      page: pageNumber,
+    },
+  })
 }
 
 export const loadMovieDetail = movieId => {
