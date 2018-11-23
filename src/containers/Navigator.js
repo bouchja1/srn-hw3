@@ -7,6 +7,6 @@ import MovieDetail from "./MovieDetail"
 export default createAppContainer(
   createStackNavigator({
     Home: RootContainer,
-    MovieDetail,
+    Detail: MovieDetail,
   }),
 )

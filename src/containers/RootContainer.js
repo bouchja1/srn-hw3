@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   },
 })
 
-export default class RootContainer extends React.PureComponent<Props> {
+export default class RootContainer extends React.PureComponent<null> {
   static navigationOptions = { title: "Home" }
 
   state = {
@@ -38,7 +38,6 @@ export default class RootContainer extends React.PureComponent<Props> {
   }
 
   _showDetail = movieId => {
-    console.log("NOOOOOOO")
     this.props.navigation.navigate("Detail", {
       movie: {
         id: movieId,

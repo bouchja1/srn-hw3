@@ -23,10 +23,8 @@ export default class MovieDetail extends React.PureComponent<Props> {
   }
 
   componentDidMount() {
-    console.log("BOOOOOOOOOOO")
     const { movie } = this.props.navigation.state.params
     loadMovieDetail(movie.id).then(response => {
-      console.log("MMMMOOOVIE: ", movie)
       this.setState({
         movie: response.data.results,
       })
