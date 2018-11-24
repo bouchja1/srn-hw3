@@ -1,12 +1,12 @@
 import { createStackNavigator, createAppContainer } from "react-navigation"
 
 // components
-import RootContainer from "./RootContainer"
+import MovieList from "./MovieList"
 import MovieDetail from "./MovieDetail"
 
 export default createAppContainer(
   createStackNavigator({
-    Home: RootContainer,
+    Home: MovieList,
     Detail: MovieDetail,
   }),
 )
